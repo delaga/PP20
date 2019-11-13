@@ -56,3 +56,4 @@ alter table polaznik add foreign key (osoba) references osoba(sifra);
 
 alter table clan add foreign key (grupa) references grupa(sifra);
 alter table clan add foreign key (polaznik) references polaznik(sifra);
+
