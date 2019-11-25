@@ -21,7 +21,7 @@ CREATE TABLE mjesto(
 CREATE TABLE katalog(
    sifra	  int NOT NULL PRIMARY KEY,
    autor	  int ,
-   naslov	  varchar(50) NOT NULL CHECK (len(naslov)>3),
+   naslov	  varchar(50) NOT NULL,
    izdavac  int ,
    mjesto   int )DEFAULT CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 
