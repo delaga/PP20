@@ -1,0 +1,296 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #404040;
+	color: #ffcc00;
+	font-size: 22px;
+	font-family: Bookmark Old Style;
+	background: url('../images/stol.jpg');	
+	background-repeat: no-repeat;
+	background-size: 100% 800px;
+}
+#mainDiv {
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+/*-------------- Header $ search ----------- */
+header {
+	text-shadow: -1px 2px 2px black;
+	font-family: "Bookmark Old Style";
+	font-size: 22px;
+	color: #ffcc00;
+	height: 12%;
+}
+#menuWrap {
+	width: 100%;
+	padding: 2% 2% 1% !important;
+} 
+h2 {
+	display: inline-block;
+	float: left;
+	width: 35%;
+	text-shadow: 2px -1px black;
+	color: #33cccc !important;
+	margin-top: 0 !important;
+}
+.menu {
+	display: inline-block;
+	float: right;
+	width: 60%;
+	padding-top: 1%;
+	border-bottom: 2px solid #392613;
+}
+.menu > ul > li {
+	list-style-type: none;
+	float: right;
+	display:inline-block;
+	position:relative;
+	padding-left: 4%;
+}
+.menu > ul > li > a {
+	text-decoration: none;
+	color: #ffcc00;
+}
+.menu > ul > li > a:hover {
+	text-decoration: underline;
+	color: #33cccc;
+}
+.searchContainer {
+	width: 20%;
+	float: right;
+	margin-right: 1%;
+}
+form.searchContainer input[type=text] {
+	width: 80%;
+	height: 32px;
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid #392613;
+	float: left;
+	background: #ffeb99;
+}
+form.searchContainer button {
+	float: left;
+	width: 18%;
+	height: 32px;
+	padding: 1%;
+	background: #392613;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+}
+form.searchContainer button:hover {
+  background: #33cccc;
+}
+form.searchContainer::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* --------------- Naslovna-------*/
+.contentNaslovna {
+    line-height: 45px;
+    padding-right: 1%;
+    padding-left: 1%;
+    width: 100%;
+    position: fixed;
+    text-align: justify;
+}
+pre {
+	color: #ffcc00;
+	font-size: 30px;
+	white-space: pre;
+	font-family: Bookmark Old Style;
+	text-shadow: 3px 2px black;
+	letter-spacing: 1px;
+	overflow: visible;
+}
+
+/*-------------- FORUM početna ------------*/
+
+#allContent {
+	display: inline-flex;
+	width: 100%;
+	height: 88%;
+}
+.teme {
+	box-sizing: content-box;
+	width: 19%;
+    height: 250px;
+    color: black;
+	position: static;
+	background-image: url(../images/papirBg.png);
+	background-size: cover;
+	text-align: center;
+}
+.teme:hover {
+   	transition: 0.3s;
+   	transform: scale(1.1);
+   	position: relative;
+   	z-index: 1;
+   	text-decoration: underline;
+}
+.teme h5 {
+	width: 100%;
+	position: static;
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	font-family: Georgia;
+	padding-top: 30%;
+}
+.med h5, .mup h5, .sudovi h5, .ostalo h5 {
+	
+}
+.teme a {
+	color: black;
+	display: inline-block;
+	text-decoration: none;
+}
+.med {
+	margin-left: 9%;
+    margin-top: 27%;
+	transform: rotateZ(-67deg);
+}
+.med h5 {
+	padding-top: 50%;
+	padding-left: ;
+}
+.mup {
+	margin-top: 18%;
+	margin-left: -3%;
+	transform: rotateZ(-20deg);
+}
+.mup h5 {
+	padding-top: 110%;
+	padding-left: ;
+	
+}
+.sudovi {
+	margin-top: 10%;
+	margin-left: -1%;
+	transform: rotateZ(-3deg);
+}
+.sudovi h5 {
+	padding-top: 65%;
+	padding-left: ;
+}
+.ud {
+	margin-top: 2%;
+	margin-left: -2%;
+}
+.ud h5 {
+	padding-top: ; 
+	padding-left: ;
+}
+.ostalo {
+	margin-top: 6%;
+	margin-left: -1%;
+	transform: rotateZ(10deg);
+}
+.ostalo h5 {
+	padding-top: 60%; 
+	padding-left: ;
+}
+/* ----------- LoginForm ---------  */
+#noBg {
+	background-color: rgb(0, 0, 0, 0.7);
+	height: 800px;
+}
+.panel {
+	border: 40px solid #333300 !important; 
+}
+.panel-login {
+	border-color: #ccc;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.panel-login > .panel-heading {
+	background-color: #fff;
+	border-color: #fff;
+	text-align:center;
+}
+.panel-login > .panel-heading a{
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 15px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login > .panel-heading a.active{
+	color: #008ae6;
+	font-size: 20px;
+}
+.panel-login>.panel-heading hr{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+}
+.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+	height: 45px;
+	border: 1px solid #ddd;
+	font-size: 18px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login input:hover,
+.panel-login input:focus {
+	outline:none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: #ccc;
+}
+.btn-login {
+	background-color: #59B2E0 !important;
+	outline: none;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.btn-login:hover,
+.btn-login:focus {
+	color: #fff;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
+}
+.forgot-password {
+	text-decoration: underline;
+	color: #888;
+}
+.forgot-password:hover,
+.forgot-password:focus {
+	text-decoration: underline;
+	color: #666;
+}
+.btn-register {
+	background-color: #00e673 !important;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+}
+.btn-register:hover,
+.btn-register:focus {
+	color: #fff;
+	background-color: #1CA347;
+	border-color: #1CA347;
+}
