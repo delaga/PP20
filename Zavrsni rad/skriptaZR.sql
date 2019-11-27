@@ -33,6 +33,7 @@ sifra int not null primary key auto_increment,
 naziv varchar(150) not null,
 tekst varchar(256) not null,
 vrijemeKreiranja datetime not null default current_timestamp,
+URLdokumenta varchar(123),
 korisnik int not null
 );
 
