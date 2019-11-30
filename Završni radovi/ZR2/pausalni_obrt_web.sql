@@ -89,7 +89,7 @@ CREATE TABLE Klijent_kupac (
   ALTER TABLE Stavka ADD FOREIGN KEY (proizvod) REFERENCES Usluga_proizvod(sifra);
   ALTER TABLE Usluga_proizvod ADD FOREIGN KEY (jedinica_mjere) REFERENCES JedinicaMjere(sifra);
   
-   INSERT INTO pausalni_obrt_web.PodaciOObrtu
+INSERT INTO pausalni_obrt_web.PodaciOObrtu
 (adresa, banka, djelatnost, email, iban, logo_url, naziv, oib, telefon_mobitel, vlasnik)
 VALUES('Kod Đegera 5', 'Lopine d.d.', 'nemam pojma', 'edunova@edunova.hr', 'HR1234567890321654987', 'https://link', 'EDUNOVA', '98765432101', '031123456', 'Eduard Kuzma');
 
