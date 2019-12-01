@@ -1,2 +1,2 @@
-Pravo Pravo - www.delaga.hr <br>
-Paušalni obrt web - www.pp20.delaga.hr
+<a href www.delaga.hr>Pravo Pravo</a>  <br>
+<a href pp20.delaga.hr>Paušalni obrt web </a>
