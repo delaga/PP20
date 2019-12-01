@@ -1,4 +1,3 @@
-# PP20
 Grupa PP20 na smjeru PHP programiranje
 <hr>
 <h2>MySQL</h2>
