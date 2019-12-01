@@ -1,5 +1,6 @@
 # PP20
 Grupa PP20 na smjeru PHP programiranje
+<hr>
 <h1>MySQL</h1>
 <p>Fileovi sa predfavanja i vježbi</p>
 
