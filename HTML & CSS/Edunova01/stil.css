@@ -1,0 +1,20 @@
+/*
+CSS selektori
+*/
+p,h2{
+    color: blue;
+}
+
+article>p{
+    color: red;
+}
+
+.bitno{
+    padding: 3m;
+    margin: 2rem;
+    border: 2vw dotted #ff00ff;
+}
+
+#naslov{
+    text-decoration: underline;
+}
