@@ -1,4 +1,4 @@
-Grupa PP20 na smjeru PHP programiranje
+<h1>Grupa PP20 na smjeru PHP programiranje</h1>
 <hr>
 <h2>1. MySQL</h2>
 <p>Fileovi sa predavanja i vježbi</p>
