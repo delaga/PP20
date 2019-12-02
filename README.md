@@ -8,3 +8,4 @@
   <li><a href="https://www.delaga.hr" target="_blank">Pravo Pravo</a>  <br></li>
   <li><a href="https://pp20.delaga.hr" target="_blank">Paušalni obrt web </a></li>
 </ol>
+<h2>3. HTML i CSS vježbe</h2>
