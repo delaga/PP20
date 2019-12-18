@@ -12,48 +12,57 @@
       <div class="grid-x">
         <div class="large-12 small-12 columns">
           <div class="callout" style="min-height: 400px;"> 
-            <h2>Ugrađeni nizovi</h2>
-            <hr>
+            Ugrađeni nizovi<hr />
             <form action="" method="post" enctype="multipart/form-data">
-                <input type="text" name='ime' id='ime'>
-                <input type="file" name='datoteka' id='dat'>
-                <input type="submit" value='Postavi'>
+              <input type="text" name="ime" id="imerrr">
+              <input type="file" name="datoteka" id="dat">
+              <input type="submit" value="Postavi" >
             </form>
-            <?php
-                echo '<pre>';
-                print_r($_GET);
-                echo '</pre>';
-                // http://localhost/Edunova05/ugradeniNizovi.php?ime=Pero&t=2&j=0
-                echo '<br>';
-                echo '<pre>';
-                print_r($_POST);
-                echo '</pre>';
-                echo '<br>';
-                echo '<pre>';
-                print_r($_REQUEST);
-                echo '</pre>';
-                echo '<br>';
-                echo '<pre>';
-                print_r($_SERVER);
-                echo '</pre>';
-                echo '<br>';
-                echo '<pre>';
-                print_r($_COOKIE);
-                echo '</pre>';
-                echo '<br>';
-                echo '<pre>';
-                print_r($_FILES);
-                echo '</pre>';
+            
+            <?php 
+              // Oni su nam uvijek dostupni
 
-                echo '<br>';
-                echo '<pre>';
-                print_r($GLOBALS);
-                echo '</pre>';
-                
-                
-                
-            ?>
 
+              echo '<pre>';
+              print_r($_GET);
+              echo '</pre>';
+
+              echo '<pre>';
+              print_r($_POST);
+              echo '</pre>';
+
+
+              echo '<pre>';
+              print_r($_REQUEST);
+              echo '</pre>';
+
+              echo '<pre>';
+              print_r($_SERVER);
+              echo '</pre>';
+
+              echo '<pre>';
+              print_r($_COOKIE);
+              echo '</pre>';
+
+
+              echo '<pre>';
+              print_r($_FILES);
+              echo '</pre>';
+
+              $_SESSION['host']=$_SERVER['REMOTE_ADDR'];
+            
+              echo '<pre>';
+              print_r($_SESSION);
+              echo '</pre>';
+
+              $t=2;
+
+              echo '<pre>';
+              print_r($GLOBALS);
+              echo '</pre>';
+
+
+             ?>
           </div>
         </div>
       </div>

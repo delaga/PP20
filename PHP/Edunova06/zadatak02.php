@@ -12,7 +12,16 @@
       <div class="grid-x">
         <div class="large-12 small-12 columns">
           <div class="callout" style="min-height: 400px;"> 
-            Dobrodošli
+             <h3>Zadatak FOR</h3>
+             <hr>
+                <?php
+                $sum=0;
+                for($i=0;$i<100;$i++){
+                    $sum+=$i+1;
+                    
+                }
+                echo $sum;
+                ?>
           </div>
         </div>
       </div>

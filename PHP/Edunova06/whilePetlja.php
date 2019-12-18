@@ -12,7 +12,32 @@
       <div class="grid-x">
         <div class="large-12 small-12 columns">
           <div class="callout" style="min-height: 400px;"> 
-            Dobrodošli
+            <h3>WHILE petlja</h3>
+            <hr>
+            <?php
+
+             /*    $uvjet=true;
+                $i=0;
+                while ($uvjet) {
+                    echo $i . '<br>';
+                    $uvjet=++$i < 10;
+                } */
+
+                $i=0;
+                while ($i< 10) {
+                    if($i===3){
+                        $i++;
+                        continue;
+                    }
+                    if ($i==5) {
+                        break;
+                    }
+                    echo $i . '<br/>';
+                    $i++;
+                }
+                
+
+            ?>
           </div>
         </div>
       </div>

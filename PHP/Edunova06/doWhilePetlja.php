@@ -12,7 +12,28 @@
       <div class="grid-x">
         <div class="large-12 small-12 columns">
           <div class="callout" style="min-height: 400px;"> 
-            Dobrodošli
+            <h3>DO WHILE petlja</h3>
+            <hr>
+            <?php
+
+                do {
+                    echo 'Edunova'.'<br/>';
+                } while (false);
+                
+                $i=0;
+                while (true) {
+                    while (true) {
+                        $i++;
+                        if($i===10){
+                            break 2;
+                        }
+                        echo $i . '<br/>';
+                        
+                    }
+                }
+
+
+            ?>
           </div>
         </div>
       </div>

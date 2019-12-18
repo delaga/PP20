@@ -12,7 +12,17 @@
       <div class="grid-x">
         <div class="large-12 small-12 columns">
           <div class="callout" style="min-height: 400px;"> 
-            Dobrodošli
+            <h3>FOR EACH petlja</h3>
+            <br>
+            <?php
+
+                $iniz=[1,2,3,4];
+
+                foreach ($iniz as $value) {
+                  echo $value . '<br/>';
+                }
+
+            ?>
           </div>
         </div>
       </div>

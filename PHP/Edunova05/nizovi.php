@@ -13,48 +13,67 @@
         <div class="large-12 small-12 columns">
           <div class="callout" style="min-height: 400px;"> 
             Nizovi
+
             <?php 
-                $niz=array();
-                $niz=[];
+              
+              $niz=array(); // stara sintaksa
 
-                //var_dump($niz);
-                $niz=1;
-                //print_r($niz);
-                $niz=[1,'Pero',true,3.7,[7]];
+              $niz=[]; //nova sintaksa koju ćemo koristiti
 
-                echo '<pre>';
-                print_r ($niz);
-                echo '</pre>';
 
-                echo $niz[1];
-                echo '<br>';
+              //var_dump($niz);
+              $niz[]=1;
 
-                echo $niz[4][0];
-                echo '<br>';
-                $niz[1]='Maja';
-                echo $niz[1];
-                
-                $niz=[
-                    'ime'=>'Marija',
-                    'prezime'=>'Zimska'
-                ];
-                echo '<pre>';
-                print_r ($niz);
-                echo '</pre>';
+              //print_r($niz);
 
-                echo $niz['prezime'];
+              // postoje dvije vrste nizove
+              //1. indeksni nizovi
+              $niz=[1,'Pero',true,3.7,[7]];
+              echo '<pre>';
+              print_r($niz);
+              echo '</pre>';
 
-                $niz=[
-                    'Edunova',
-                    'grad'=>'Osijek',
-                    '3'
-                ];
-                echo '<pre>';
-                print_r ($niz);
-                echo '</pre>';
+              //ispiši Pero
+              echo $niz[1];
 
-                
-            ?>
+              //ispiši 7
+              echo $niz[4][0];
+
+              //mjenjanje sadržaja
+              $niz[1]='Maja';
+              echo $niz[1];
+
+              //2. asocijativni nizovi
+              // sastoje se od parova ključ-vrijednost
+              $niz=[
+                'ime'=>'Marija',
+                'prezime'=>'Zimska'
+              ];
+
+              echo '<pre>';
+              print_r($niz);
+              echo '</pre>';
+
+              echo $niz['prezime'];
+
+
+              // kombinacija
+
+              $niz=[
+                'Edunova',
+                'grad'=>'Osijek',
+                3
+              ];
+
+              echo '<pre>';
+              print_r($niz);
+              echo '</pre>';
+
+
+
+
+
+             ?>
           </div>
         </div>
       </div>

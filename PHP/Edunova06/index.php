@@ -12,7 +12,7 @@
       <div class="grid-x">
         <div class="large-12 small-12 columns">
           <div class="callout" style="min-height: 400px;"> 
-            Dobrodošli
+            Dobrodošli 
           </div>
         </div>
       </div>

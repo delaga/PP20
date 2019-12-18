@@ -15,18 +15,23 @@
         <li><a href="varijable.php">Varijable</a></li>
         <li><a href="if.php">If</a></li>
         <li><a href="switch.php">Switch</a></li>
-        <li><a href="nizovi.php">Nizovi (polja) - Arrays</a></li>
-        <li><a href="ugradeniNizovi.php">Ugrađeni nizovi</a></li>
+        <li><a href="nizovi.php">Nizovi (Polja) - Arrays</a></li>
+        <li><a href="ugradeniNizovi.php">Ugrađeni Nizovi</a></li>
+        <li><a href="forPetlja.php">FOR petlja</a></li>
+        <li><a href="whilePetlja.php">WHILE petlja</a></li>
+        <li><a href="doWhilePetlja.php">DO WHILE petlja</a></li>
+        <li><a href="forEachPetlja.php">FOR EACH petlja</a></li>
         </ul>
     </li>
     <li>
-    
         <a href="#">Zadaci</a>
         <ul class="menu vertical">
-            <li><a href="zadatak.php">Zadatak if switch</a></li>
-            <li><a href="zadatak1.php">Zadatak nizovi</a></li>
-        </ul>
+        <li><a href="zadatakIFS.php">Zadatak IF SWITCH</a></li>
+        <li><a href="zadatak01.php">Zadatak 1</a></li>
+        <li><a href="zadatak02.php">Zadatak FOR</a></li>
+        <li><a href="zadatak03.php">Zadatak 3</a></li>
         
+        </ul>
     </li>
     </ul>
 </div>
