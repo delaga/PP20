@@ -12,7 +12,17 @@
       <div class="grid-x">
         <div class="large-12 small-12 columns">
           <div class="callout" style="min-height: 400px;"> 
-            Z3
+            <h3>Zadatak 03.</h3>
+            <hr>
+            <p>Kreirati program koji za dva unesena broja ispisuje sve prim brojeve između njih.</p>
+            <br>
+            <form action="" method="post">
+              <h2>Unesi prvi broj</h2>
+              <input type="number" name='prviBroj' id='prviBroj'>
+              <h2>Unesi drugi broj</h2>
+              <input type="number" name='drugiBroj' id='drugiBroj'>
+              <input type="submit" value="SUBMIT">
+            </form>
           </div>
         </div>
       </div>

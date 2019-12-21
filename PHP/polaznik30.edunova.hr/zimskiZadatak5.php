@@ -12,10 +12,9 @@
       <div class="grid-x">
         <div class="large-12 small-12 columns">
           <div class="callout" style="min-height: 400px;"> 
-            <h3>Zadatak 02.</h3>
+            <h3>Zadatak 05.</h3>
             <hr>
-            <p>Kreirati program koji ispisuje tablicu množenja 15x15</p>
-
+            <p>Kreirati program koji ispisuje cikličnu matricu (predložak u prilogu)</p>
           </div>
         </div>
       </div>

@@ -12,7 +12,18 @@
       <div class="grid-x">
         <div class="large-12 small-12 columns">
           <div class="callout" style="min-height: 400px;"> 
-            <h3>Zadatak 01</h3>
+            <h3>Zadatak 01.</h3>
+            <hr>
+            <p>Kreirati program koji unosi 24 broja, ispisuje njihov zbroj, najmanji i  najveći uneseni broj.</p>
+            <br>
+            <?php 
+              for ($i=0; $i < 25; $i++) { 
+                $s+=$i;
+                
+                echo $i.'+';
+              }
+              echo ' = '.$s;
+            ?>
           </div>
         </div>
       </div>

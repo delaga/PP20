@@ -40,6 +40,8 @@
             <li><a href="zimskiZadatak1.php">Prvi Zadatak</a></li>
             <li><a href="zimskiZadatak2.php">Drugi Zadatak </a></li>
             <li><a href="zimskiZadatak3.php">Treći Zadatak</a></li>
+            <li><a href="zimskiZadatak4.php">Četvrti Zadatak</a></li>
+            <li><a href="zimskiZadatak5.php">Peti Zadatak</a></li>
         </ul>
         
     </li>
