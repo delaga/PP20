@@ -8,3 +8,4 @@ $b=$_GET['broj2'];
 $c=$a+$b;
 
 echo $c;
+
