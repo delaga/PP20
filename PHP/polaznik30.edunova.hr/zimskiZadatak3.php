@@ -45,8 +45,21 @@
               //a sada ono bitno....
               echo '<h4>Manji je '.$manji.'</h4>';
               echo '<h4>Veći je '.$veci.'</h4>';
-
-                          
+              echo '<h4>Primarni brojevi između su ...</h4>';
+              for($i=$manji;$i<$veci;$i++){
+                for($j=2;$j<$veci;$j++){
+                  if($i%$j==0){
+                  break;
+                  }
+                }
+                if($i==$j){
+                  echo $i.' • ';
+                  $s+=$i;
+                }
+               }
+              echo '<br/>';
+              echo '<h4>Njihova suma je '.$s.'</h4>';
+              
 
             ?>
           </div>
