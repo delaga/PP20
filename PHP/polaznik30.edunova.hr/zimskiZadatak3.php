@@ -17,12 +17,15 @@
             <p>Kreirati program koji za dva unesena broja ispisuje sve prim brojeve između njih.</p>
             <br>
             <form action="" method="post">
-              <h2>Unesi prvi broj</h2>
+              <h4>Unesi prvi broj</h4>
               <input type="number" name='prviBroj' id='prviBroj'>
-              <h2>Unesi drugi broj</h2>
+              <h4>Unesi drugi broj</h4>
               <input type="number" name='drugiBroj' id='drugiBroj'>
               <input type="submit" value="SUBMIT">
             </form>
+            <?php
+              print_r($_POST);
+            ?>
           </div>
         </div>
       </div>

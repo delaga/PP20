@@ -17,12 +17,19 @@
             <p>Kreirati program koji unosi 24 broja, ispisuje njihov zbroj, najmanji i  najveći uneseni broj.</p>
             <br>
             <?php 
-              for ($i=0; $i < 25; $i++) { 
-                $s+=$i;
+              $niz=[];
+              for ($i=0; $i < 24; $i++) { 
+                $niz[$i]=rand(1,1000);
                 
-                echo $i.'+';
+                echo $niz[$i].'+';
+                $s+=$niz[$i];
               }
               echo ' = '.$s;
+              echo '<br>';
+              $min=min($niz);
+              $max=max($niz);
+              echo '<h4>Najmanji je '.$min.'</h4>';
+              echo '<h4>Najveći je '.$max.'</h4>';
             ?>
           </div>
         </div>

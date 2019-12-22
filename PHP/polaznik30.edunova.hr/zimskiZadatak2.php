@@ -4,6 +4,10 @@
     <?php include_once 'predlozak/head.php'; ?>
     <?php //include_once 'predlozak/head1.php'; ?>
     <?php //include 'predlozak/head.php'; ?>
+    <style type="text/css">table td {
+      text-align: center;
+      }
+    </style>
   </head>
   <body>
     <div class="grid-container">
@@ -15,7 +19,18 @@
             <h3>Zadatak 02.</h3>
             <hr>
             <p>Kreirati program koji ispisuje tablicu množenja 15x15</p>
+            <table >
+              <?php
+                for ($i=0; $i < 15; $i++) { 
+                  echo '<tr>';
+                  for ($j=0; $j < 15; $j++) { 
+                    echo '<td>' . ($i+1) * ($j+1) .'</td>';
+                  }
+                  echo '</tr>';
+                }
 
+              ?>
+            </table>
           </div>
         </div>
       </div>
