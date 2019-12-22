@@ -24,7 +24,7 @@
                 echo $niz[$i].'+';
                 $s+=$niz[$i];
               }
-              echo ' = '.$s;
+              echo ' = <h4>'.$s.'</h4>';
               echo '<br>';
               $min=min($niz);
               $max=max($niz);
