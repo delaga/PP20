@@ -15,6 +15,27 @@
             <h3>Zadatak 05.</h3>
             <hr>
             <p>Kreirati program koji ispisuje cikličnu matricu (predložak u prilogu)</p>
+            <br>
+
+            <form action="" method="post">
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                    <h4>Unesi broj stupaca</h4>
+                    <input type="number" name='prviBroj' id='prviBroj'>
+                </div>
+                <div class="medium-6 cell">
+                  <h4>Unesi broj redova</h4>
+                  <input type="number" name='drugiBroj' id='drugiBroj'>
+                </div>
+                <div class="large-12 cell">
+                  <input type="submit" value="KRENI" class='button expanded'>
+                </div>
+            </div>
+            </div>
+            </form>
+
+            
           </div>
         </div>
       </div>

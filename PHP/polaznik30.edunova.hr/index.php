@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
   <head>
-<<<<<<< HEAD
+
     <?php include_once 'predlozak/head.php'; ?>
     <?php //include_once 'predlozak/head1.php'; ?>
     <?php //include 'predlozak/head.php'; ?>
@@ -21,7 +21,7 @@
       <?php require_once 'predlozak/podnozje.php' ?>
     </div>
     <?php require_once 'predlozak/skripte.php' ?>
-=======
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,6 +61,6 @@
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
->>>>>>> 89f150e5a392cf05bad6747e92d9525ad6252f92
+
   </body>
 </html>
