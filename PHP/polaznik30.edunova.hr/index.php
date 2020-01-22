@@ -20,4 +20,6 @@ $t = implode(PATH_SEPARATOR,
         return include $putanja;
     });
 
+    
+
     Test::izvediTest();
