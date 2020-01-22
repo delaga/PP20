@@ -20,11 +20,5 @@ $t = implode(PATH_SEPARATOR,
         return include $putanja;
     });
 
-<<<<<<< HEAD
     //Test::izvediTest();
     App::start();
-=======
-    
-
-    Test::izvediTest();
->>>>>>> 3713426acdfe6e13ad4e02be7d101f9a0f1878ef
