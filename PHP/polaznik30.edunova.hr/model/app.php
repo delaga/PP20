@@ -22,7 +22,7 @@
             }else{
                 $funkcija= $djelovi[2];
             }
-            echo $klasa.'->'.$funkcija.'();';
+            //echo $klasa.'->'.$funkcija.'();';
 
             if(class_exists($klasa) && method_exists($klasa,$funkcija)){
                 $instanca= new $klasa();

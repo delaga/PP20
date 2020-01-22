@@ -17,14 +17,21 @@ $t = implode(PATH_SEPARATOR,
     spl_autoload_register(function($klasa) 
     {
         $putanja = strtr($klasa,"\\",DIRECTORY_SEPARATOR) . ".php";
-        return include $putanja;
+
+        $paths=explode(PATH_SEPARATOR, get_include_path());
+        foreach($paths as $p){
+            //echo $p . DIRECTORY_SEPARATOR . $klasa . '<br />';
+            if(file_exists($p . DIRECTORY_SEPARATOR . $klasa . '.php')){
+                include $p . DIRECTORY_SEPARATOR . $klasa . '.php';
+                break;
+            }
+        }
     });
 
-<<<<<<< HEAD
     //Test::izvediTest();
     App::start();
-=======
+
     
 
-    Test::izvediTest();
->>>>>>> 3713426acdfe6e13ad4e02be7d101f9a0f1878ef
+    //Test::izvediTest();
+
