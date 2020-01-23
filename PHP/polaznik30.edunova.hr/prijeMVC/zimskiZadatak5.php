@@ -44,9 +44,68 @@
           $stupac = $_POST['stupci'];
           $red = $_POST['redovi'];
           //init 
-          echo $stupac . ' ' . $red;
-          //prikaži barem nešto
-          print_r($matrica);
+          //echo $stupac . ' ' . $red;
+          
+          // varijabilamo
+          $minRed=0;
+          $maxRed=$red-1;
+          $minStupac=0;
+          $maxStupac=$stupac-1;
+          $brojUpisuje=1;
+          $zadnjiBroj=$red * $stupac;
+          $matrica=[];
+
+          // a sad engine
+          echo $minRed;
+          echo $maxRed;
+          echo $minStupac;
+          echo $maxStupac;
+          echo $brojUpisuje;
+          echo $zadnjiBroj;
+          echo $matrica;
+
+          while ($zadnjiBroj>=$brojUpisuje) {
+            //desno->lijevo
+            for ($i=$maxStupac; $i >=$minStupac ; $i--) { 
+              $matrica[$maxStupac][$i]=$brojUpisuje;
+              $brojUpisuje++;
+            }
+            //dole->gore
+            for ($i=$maxRed-1; $i>=$minRed  ; $i--) { 
+              $matrica[$i][$minStupac]=$brojUpisuje;
+              $brojUpisuje++;
+            }
+            //lijevo->desno
+            for ($i=$minStupac+1; $i <=$maxStupac ; $i++) { 
+              $matrica[$minRed][$i]=$brojUpisuje;
+              $brojUpisuje++;
+            }
+            //gore -> dole
+            for ($i=$minRed+1; $i <=$maxRed-1 ; $i++) { 
+              $matrica[$i][$maxStupac]=$brojUpisuje;
+              $brojUpisuje++;
+            }
+            $minStupac++;
+            $maxStupac--;
+            $minRed++;
+            $maxRed--;
+          }
+
+
+          //prikaži barem nešto JEBOTE!!!!
+          //print_r($matrica);
+
+          echo '<hr>';
+
+          echo '<table>';
+            for ($i=0; $i < $red; $i++) { 
+              echo '<tr>';
+              for ($j=0; $j < $stupac; $j++) { 
+                echo '<td>' . $matrica[$i][$j] . '</td>';
+              }
+              echo '</tr>';
+            }
+          echo '</table>';
 
 
 
