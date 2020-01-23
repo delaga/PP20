@@ -55,48 +55,114 @@
           $zadnjiBroj=$red * $stupac;
           $matrica=[];
 
-          // a sad engine
-          echo $minRed;
-          echo $maxRed;
-          echo $minStupac;
-          echo $maxStupac;
-          echo $brojUpisuje;
-          echo $zadnjiBroj;
-          echo $matrica;
+          $minRedDva=0;
+          $maxRedDva=$red-1;
+          $minStupacDva=0;
+          $maxStupacDva=$stupac-1;
+          $brojUpisujeDva=1;
+          $zadnjiBrojDva=$red * $stupac;
+          $matricaDruga=[]; 
 
-          while ($zadnjiBroj>=$brojUpisuje) {
+          // a sad engine
+          /* echo 'SmnR='.$minRed.'<br/>';
+          echo 'SmxR='.$maxRed.'<br/>';
+          echo 'SmnS='.$minStupac.'<br/>';
+          echo 'SmxS='.$maxStupac.'<br/>';
+          echo 'SBU='.$brojUpisuje.'<br/>';
+          echo'SZB='. $zadnjiBroj.'<br/>'; */
+          
+
+          while ($brojUpisuje<=$zadnjiBroj) {
             //desno->lijevo
             for ($i=$maxStupac; $i >=$minStupac ; $i--) { 
-              $matrica[$maxStupac][$i]=$brojUpisuje;
+              $matrica[$maxRed][$i]=$brojUpisuje;
               $brojUpisuje++;
+              
             }
+            if ($brojUpisuje>$zadnjiBroj) break;
             //dole->gore
             for ($i=$maxRed-1; $i>=$minRed  ; $i--) { 
               $matrica[$i][$minStupac]=$brojUpisuje;
               $brojUpisuje++;
+              
             }
+            if ($brojUpisuje>$zadnjiBroj) break;
             //lijevo->desno
             for ($i=$minStupac+1; $i <=$maxStupac ; $i++) { 
               $matrica[$minRed][$i]=$brojUpisuje;
               $brojUpisuje++;
+              
             }
+            if ($brojUpisuje>$zadnjiBroj) break;
             //gore -> dole
             for ($i=$minRed+1; $i <=$maxRed-1 ; $i++) { 
               $matrica[$i][$maxStupac]=$brojUpisuje;
               $brojUpisuje++;
+              
             }
+            if ($brojUpisuje>$zadnjiBroj) break;
+            
             $minStupac++;
             $maxStupac--;
             $minRed++;
             $maxRed--;
           }
-
+          /* echo 'EmnR='.$minRed.'<br/>';
+          echo 'EmxR='.$maxRed.'<br/>';
+          echo 'EmnS='.$minStupac.'<br/>';
+          echo 'EmxS='.$maxStupac.'<br/>';
+          echo 'EBU='.$brojUpisuje.'<br/>';
+          echo'EZB='. $zadnjiBroj.'<br/>'; */
 
           //prikaži barem nešto JEBOTE!!!!
           //print_r($matrica);
 
-          echo '<hr>';
+          // matricaDruga
+          
 
+          while ($brojUpisujeDva<=$zadnjiBrojDva) {
+            //lijevo->desno
+            for ($i=$minStupacDva; $i <=$maxStupacDva ; $i++) { 
+              $matricaDruga[$minRedDva][$i]=$brojUpisujeDva;
+              $brojUpisujeDva++;
+              
+            }
+            if ($brojUpisujeDva>$zadnjiBrojDva) break;
+
+            //gore -> dole
+            for ($i=$minRedDva+1; $i <=$maxRedDva-1 ; $i++) { 
+              $matricaDruga[$i][$maxStupacDva]=$brojUpisujeDva;
+              $brojUpisujeDva++;
+              
+            }
+            if ($brojUpisujeDva>$zadnjiBrojDva) break;
+
+             //desno->lijevo
+             for ($i=$maxStupacDva; $i >=$minStupacDva ; $i--) { 
+              $matricaDruga[$maxRedDva][$i]=$brojUpisujeDva;
+              $brojUpisujeDva++;
+              
+            }
+            if ($brojUpisujeDva>$zadnjiBrojDva) break;
+            //dole->gore
+            for ($i=$maxRedDva-1; $i>=$minRedDva+1  ; $i--) { 
+              $matricaDruga[$i][$minStupacDva]=$brojUpisujeDva;
+              $brojUpisujeDva++;
+              
+            }
+            if ($brojUpisujeDva>$zadnjiBrojDva) break;
+            
+            
+            
+            $minStupacDva++;
+            $maxStupacDva--;
+            $minRedDva++;
+            $maxRedDva--;
+          }
+
+
+          echo '<hr>';
+          echo '<h2>Zlo</h2>';
           echo '<table>';
             for ($i=0; $i < $red; $i++) { 
               echo '<tr>';
@@ -106,25 +172,22 @@
               echo '</tr>';
             }
           echo '</table>';
-
+          echo '<hr>';
+          echo '<h2>i naopako</h2>';
+          echo '<table>';
+            for ($i=0; $i < $red; $i++) { 
+              echo '<tr>';
+              for ($j=0; $j < $stupac; $j++) { 
+                echo '<td>' . $matricaDruga[$i][$j] . '</td>';
+              }
+              echo '</tr>';
+            }
+          echo '</table>';
 
 
           ?>
-          <table class="tab">
-          <?php 
-                  for($i=0;$i<$rows;)
-                  {
-                    echo '<tr>';
-                      for ($j=0; $j < $stupac;) 
-                      { 
-                        echo '<td>'. $matrica[$i][$j] .'</td>';
-                        $j++;
-                      }
-                      echo '</tr>';
-                      $i++;
-                  } 
-          ?>
-          </table>
+         
+
 
         </div>
       </div>
