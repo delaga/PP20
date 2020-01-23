@@ -44,37 +44,7 @@
           $stupac = $_POST['stupci'];
           $red = $_POST['redovi'];
           //init 
-          $matrica = [$red][$stupac];
-          $minRed = 0;
-          $maxRed = $red - 1;
-          $minStupac = 0;
-          $maxStupac = $stupac - 1;
-
-          $brojUpisuje = 1;
-          $krajBroj = $red * $stupac;
-          //posloži
-          while ($krajBroj >= $brojUpisuje) {
-            for ($i = $maxStupac; $i >= $minStupac; $i--) {
-              $matrica[$maxRed][$i] = $brojUpisuje;
-              $brojUpisuje++;
-            }
-            for ($i = $maxRed - 1; $i >= $maxRed; $i--) {
-              $matrica[$i][$minStupac] = $brojUpisuje;
-              $brojUpisuje++;
-            }
-            for ($i = $minStupac + 1; $i <= $maxStupac; $i++) {
-              $matrica[$minRed][$i] = $brojUpisuje;
-              $brojUpisuje++;
-            }
-            for ($i = $minRed + 1; $i <= $maxRed - 1; $i++) {
-              $matrica[$i][$maxStupac] = $brojUpisuje;
-              $brojUpisuje++;
-            }
-            $minStupac++;
-            $maxStupac--;
-            $minRed++;
-            $maxRed--;
-          }
+          echo $stupac . ' ' . $red;
           //prikaži barem nešto
           print_r($matrica);
 

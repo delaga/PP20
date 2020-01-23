@@ -14,6 +14,7 @@ $t = implode(PATH_SEPARATOR,
 
     set_include_path($t);
 
+    
     spl_autoload_register(function($klasa) 
     {
         $putanja = strtr($klasa,"\\",DIRECTORY_SEPARATOR) . ".php";
@@ -32,6 +33,6 @@ $t = implode(PATH_SEPARATOR,
     App::start();
 
     
-
+    
     //Test::izvediTest();
 
