@@ -170,7 +170,7 @@
 
         //matrica Treca
 
-        while ($brojUpisuje3<=$zadnjiBroj3) {
+        while ($brojUpisuje3 <= $zadnjiBroj3) {
           //gore -> dole
           for ($i = $minRed3; $i <= $maxRed3; $i++) {
             $matrica3[$i][$minStupac3] = $brojUpisuje3;
@@ -179,7 +179,7 @@
           if ($brojUpisuje3 > $zadnjiBroj3) break;
 
           //lijevo->desno
-          for ($i = $minStupac3+1; $i <= $maxStupac3; $i++) {
+          for ($i = $minStupac3 + 1; $i <= $maxStupac3; $i++) {
             $matrica3[$maxRed3][$i] = $brojUpisuje3;
             $brojUpisuje3++;
           }
@@ -187,14 +187,14 @@
 
           //dole->gore
           for ($i = $maxRed3 - 1; $i >= $minRed3; $i--) {
-            $matrica3[$i][$minStupac3] = $brojUpisuje3;
+            $matrica3[$i][$maxStupac3] = $brojUpisuje3;
             $brojUpisuje3++;
           }
           if ($brojUpisuje3 > $zadnjiBroj3) break;
 
           //desno->lijevo
-          for ($i = $maxStupac3-1; $i >= $minStupac3; $i--) {
-            $matrica3[$maxRed3][$i] = $brojUpisuje3;
+          for ($i = $maxStupac3 - 1; $i >= $minStupac3 + 1; $i--) {
+            $matrica3[$minRed3][$i] = $brojUpisuje3;
             $brojUpisuje3++;
           }
           if ($brojUpisuje3 > $zadnjiBroj3) break;
@@ -206,53 +206,92 @@
         }
 
         //matrica Cetvrta
+        while ($brojUpisuje4 <= $zadnjiBroj4) {
+          //dole->gore
+          for ($i = $maxRed4; $i >= $minRed4; $i--) {
+            $matrica4[$i][$maxStupac4] = $brojUpisuje4;
+            $brojUpisuje4++;
+          }
+          if ($brojUpisuje4 > $zadnjiBroj4) break;
+          //desno->lijevo
+          for ($i = $maxStupac4 - 1; $i >= $minStupac4; $i--) {
+            $matrica4[$minRed4][$i] = $brojUpisuje4;
+            $brojUpisuje4++;
+          }
+          if ($brojUpisuje4 > $zadnjiBroj4) break;
+          //gore -> dole
+          for ($i = $minRed4 + 1; $i <= $maxRed4; $i++) {
+            $matrica4[$i][$minStupac4] = $brojUpisuje4;
+            $brojUpisuje4++;
+          }
+          if ($brojUpisuje4 > $zadnjiBroj4) break;
+          //lijevo->desno
+          for ($i = $minStupac4 + 1; $i <= $maxStupac4 - 1; $i++) {
+            $matrica4[$maxRed4][$i] = $brojUpisuje4;
+            $brojUpisuje4++;
+          }
+          if ($brojUpisuje4 > $zadnjiBroj4) break;
+
+          $minStupac4++;
+          $maxStupac4--;
+          $minRed4++;
+          $maxRed4--;
+        }
+
 
         echo '<hr>';
-        $od = $red - 1;
-        $do = $stupac - 1;
-        echo '<h3>Od ' . $od  . ',' . $do  . ' pa Clockwise</h3>';
-        echo '<table>';
-        for ($i = 0; $i < $red; $i++) {
-          echo '<tr>';
-          for ($j = 0; $j < $stupac; $j++) {
-            echo '<td>' . $matrica[$i][$j] . '</td>';
+
+        if ($stupac === '' ||  $red === '') {
+
+          echo "Unesite vrijednosti";
+        } else {
+
+          $od = $red - 1;
+          $do = $stupac - 1;
+          echo '<h3>Od ' . $od  . ',' . $do  . ' pa Clockwise</h3>';
+          echo '<table >';
+          for ($i = 0; $i < $red; $i++) {
+            echo '<tr>';
+            for ($j = 0; $j < $stupac; $j++) {
+              echo '<td>' . $matrica[$i][$j] . '</td>';
+            }
+            echo '</tr>';
           }
-          echo '</tr>';
-        }
-        echo '</table>';
-        echo '<hr>';
-        echo '<h3>Od 0,0 pa Clockwise</h3>';
-        echo '<table>';
-        for ($i = 0; $i < $red; $i++) {
-          echo '<tr>';
-          for ($j = 0; $j < $stupac; $j++) {
-            echo '<td>' . $matrica2[$i][$j] . '</td>';
+          echo '</table>';
+          echo '<hr>';
+          echo '<h3>Od 0,0 pa Clockwise</h3>';
+          echo '<table>';
+          for ($i = 0; $i < $red; $i++) {
+            echo '<tr>';
+            for ($j = 0; $j < $stupac; $j++) {
+              echo '<td>' . $matrica2[$i][$j] . '</td>';
+            }
+            echo '</tr>';
           }
-          echo '</tr>';
-        }
-        echo '</table>';
-        echo '<hr>';
-        echo '<h3>Od 0,0 pa !Clockwise</h3>';
-        echo '<table>';
-        for ($i = 0; $i < $red; $i++) {
-          echo '<tr>';
-          for ($j = 0; $j < $stupac; $j++) {
-            echo '<td>' . $matrica3[$i][$j] . '</td>';
+          echo '</table>';
+          echo '<hr>';
+          echo '<h3>Od 0,0 pa !Clockwise</h3>';
+          echo '<table>';
+          for ($i = 0; $i < $red; $i++) {
+            echo '<tr>';
+            for ($j = 0; $j < $stupac; $j++) {
+              echo '<td>' . $matrica3[$i][$j] . '</td>';
+            }
+            echo '</tr>';
           }
-          echo '</tr>';
-        }
-        echo '</table>';
-        echo '<hr>';
-        echo '<h3>Od ' . $od  . ',' . $do  . ' pa !Clockwise</h3>';
-        echo '<table>';
-        for ($i = 0; $i < $red; $i++) {
-          echo '<tr>';
-          for ($j = 0; $j < $stupac; $j++) {
-            echo '<td>' . $matrica4[$i][$j] . '</td>';
+          echo '</table>';
+          echo '<hr>';
+          echo '<h3>Od ' . $od  . ',' . $do  . ' pa !Clockwise</h3>';
+          echo '<table>';
+          for ($i = 0; $i < $red; $i++) {
+            echo '<tr>';
+            for ($j = 0; $j < $stupac; $j++) {
+              echo '<td>' . $matrica4[$i][$j] . '</td>';
+            }
+            echo '</tr>';
           }
-          echo '</tr>';
+          echo '</table>';
         }
-        echo '</table>';
         ?>
 
 
