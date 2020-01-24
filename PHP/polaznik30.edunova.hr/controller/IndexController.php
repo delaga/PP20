@@ -1,13 +1,18 @@
 <?php
+
 class IndexController
 {
     public function index()
     {
-        $poruka='Hello iz kontrolera';
+        $poruka='hello iz kontrolera';
         $kod=22;
 
-        $view= new View();
-        $view->render('pocetna',['p'=>$poruka,'k'=>$kod]);
+        $view = new View();
+        $view->render('pocetna',[
+            'p'=>$poruka,
+            'k'=>$kod]
+        );
+
 
     }
 }
