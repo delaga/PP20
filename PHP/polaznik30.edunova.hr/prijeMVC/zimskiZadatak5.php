@@ -252,7 +252,7 @@
            }
    
         if($_REQUEST===[]){
-          phpAlert("Molim unesite vrijednosti");
+          phpAlert("Dobrodošli na Mirzusovo rješenje zadatka5.\\n\\Molim unesite vrijednosti");
         }elseif($stupac === '' && $red===''){
           phpAlert("Unesite broj stupaca i redova");
         }elseif($stupac===''){
