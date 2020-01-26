@@ -7,7 +7,7 @@
 <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
 <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
-    <li class="menu-text show-for-large"><?php echo $nazivAPP ?></li>
+    <li class="menu-text show-for-large"> <a href="https://www.delaga.hr"><?php echo $nazivAPP ?></a></li>
     <li><a href="index.php">Početna</a></li>
     <li>
         <a href="#">PHP</a>

@@ -21,7 +21,7 @@
         <p>Kreirati program koji ispisuje cikličnu matricu (predložak u prilogu)</p>
         <br>
 
-        <form action="" method="post">
+        <form action="" method="request">
           <div class="grid-container">
             <div class="grid-x grid-padding-x">
               <div class="medium-6 cell">
@@ -41,8 +41,12 @@
         <?php
         error_reporting(E_ERROR | E_WARNING | E_PARSE);
         //dohvati
-        $stupac = $_POST['stupci'];
-        $red = $_POST['redovi'];
+
+        //$stupac = $_POST['stupci'];
+        //$red = $_POST['redovi'];
+        $stupac=$_REQUEST['stupci'];
+        $red=$_REQUEST['redovi'];
+
         //init 
         //echo $stupac . ' ' . $red;
 
@@ -238,12 +242,15 @@
           $maxRed4--;
         }
 
+        
+        //print_r($_REQUEST);
 
         echo '<hr>';
 
-        if ($stupac === '' ||  $red === '') {
+        if ($stupac === '' ||  $red === '' || $_REQUEST===[] ) {
 
           echo "Unesite vrijednosti";
+
         } else {
 
           $od = $red - 1;
