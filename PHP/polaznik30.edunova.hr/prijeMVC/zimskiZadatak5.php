@@ -247,10 +247,18 @@
 
         echo '<hr>';
 
-        if ($stupac === '' ||  $red === '' || $_REQUEST===[] ) {
-
-          echo "Unesite vrijednosti";
-
+        function phpAlert($msg) {
+            echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+           }
+   
+        if($_REQUEST===[]){
+          phpAlert("Molim unesite vrijednosti");
+        }elseif($stupac === '' && $red===''){
+          phpAlert("Unesite broj stupaca i redova");
+        }elseif($stupac===''){
+          phpAlert("Unesite broj stupaca");
+        }elseif($red===''){
+          phpAlert("Unesite broj redova");
         } else {
 
           $od = $red - 1;
