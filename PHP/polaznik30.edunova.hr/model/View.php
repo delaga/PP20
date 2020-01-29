@@ -9,7 +9,7 @@ class View
      $this->layout=$layout;   
     }
 
-    public function render($stranica,$parametri)
+    public function render($stranica,$parametri=[])
     {
         ob_start();
         extract($parametri);

@@ -43,4 +43,10 @@ class App
 
 
     }
+
+    public static function config($kljuc)
+    {
+        $konfiguracija=include BP . 'konfiguracija.php';
+        return $konfiguracija[$kljuc];
+    }
 }
