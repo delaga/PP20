@@ -30,10 +30,28 @@ class App
                 $funkcija=$djelovi[2];
         }
 
+/*
+        $parametar1='';
+        if(!isset($djelovi[3]) || $djelovi[3]===''){
+                $parametar1='';
+            }else{
+                $parametar1=$djelovi[3];
+        }
+*/
         //echo $klasa . '->' . $funkcija . '();';
 
 
         if(class_exists($klasa) && method_exists($klasa,$funkcija)){
+           /*
+            if($parametar1!==''){
+                $instanca = new $klasa();
+                $instanca->$funkcija($parametar1);
+            }else{
+                $instanca = new $klasa();
+                $instanca->$funkcija();
+            }
+            */
+
             $instanca = new $klasa();
             $instanca->$funkcija();
         }else{
@@ -46,7 +64,8 @@ class App
 
     public static function config($kljuc)
     {
-        $konfiguracija=include BP . 'konfiguracija.php';
+        $konfiguracija = include BP . 'konfiguracija.php';
+    
         return $konfiguracija[$kljuc];
     }
 }
