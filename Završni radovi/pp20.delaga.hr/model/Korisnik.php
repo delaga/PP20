@@ -3,13 +3,16 @@
 class Korisnik
 {
     private $sifra;
-    private $ime;
-    private $prezime;
+    private $korisnickoIme;
     private $email;
     private $lozinka;
     private $uloga;
-
+    private $vrijemeKreiranja;
+    private $URLavatar;
+    private $aktivan;
     
+    
+
 
     /**
      * Get the value of sifra
@@ -32,41 +35,21 @@ class Korisnik
     }
 
     /**
-     * Get the value of ime
+     * Get the value of korisnickoIme
      */ 
-    public function getIme()
+    public function getKorisnickoIme()
     {
-        return $this->ime;
+        return $this->korisnickoIme;
     }
 
     /**
-     * Set the value of ime
+     * Set the value of korisnickoIme
      *
      * @return  self
      */ 
-    public function setIme($ime)
+    public function setKorisnickoIme($korisnickoIme)
     {
-        $this->ime = $ime;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of prezime
-     */ 
-    public function getPrezime()
-    {
-        return $this->prezime;
-    }
-
-    /**
-     * Set the value of prezime
-     *
-     * @return  self
-     */ 
-    public function setPrezime($prezime)
-    {
-        $this->prezime = $prezime;
+        $this->korisnickoIme = $korisnickoIme;
 
         return $this;
     }
@@ -127,6 +110,66 @@ class Korisnik
     public function setUloga($uloga)
     {
         $this->uloga = $uloga;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of vrijemeKreiranja
+     */ 
+    public function getVrijemeKreiranja()
+    {
+        return $this->vrijemeKreiranja;
+    }
+
+    /**
+     * Set the value of vrijemeKreiranja
+     *
+     * @return  self
+     */ 
+    public function setVrijemeKreiranja($vrijemeKreiranja)
+    {
+        $this->vrijemeKreiranja = $vrijemeKreiranja;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of URLavatar
+     */ 
+    public function getURLavatar()
+    {
+        return $this->URLavatar;
+    }
+
+    /**
+     * Set the value of URLavatar
+     *
+     * @return  self
+     */ 
+    public function setURLavatar($URLavatar)
+    {
+        $this->URLavatar = $URLavatar;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of aktivan
+     */ 
+    public function getAktivan()
+    {
+        return $this->aktivan;
+    }
+
+    /**
+     * Set the value of aktivan
+     *
+     * @return  self
+     */ 
+    public function setAktivan($aktivan)
+    {
+        $this->aktivan = $aktivan;
 
         return $this;
     }
