@@ -3,16 +3,11 @@
 
 <head>
   <?php include_once 'predlozak/head.php'; ?>
-  <?php //include_once 'predlozak/head1.php'; 
-  ?>
-  <?php //include 'predlozak/head.php'; 
-  ?>
 </head>
 
 <body>
   <div class="grid-container">
     <?php require_once 'predlozak/izbornik.php' ?>
-    <!-- Početak tijela -->
     <div class="grid-x">
       <div class="large-12 small-12 columns">
 
@@ -44,10 +39,9 @@
 
         //$stupac = $_POST['stupci'];
         //$red = $_POST['redovi'];
-        $stupac=$_REQUEST['stupci'];
-        $red=$_REQUEST['redovi'];
+        $stupac = $_REQUEST['stupci'];
+        $red = $_REQUEST['redovi'];
 
-        //init 
         //echo $stupac . ' ' . $red;
 
         // varijabilamo
@@ -84,14 +78,7 @@
         $matrica4 = [];
 
         // a sad engine
-        /* echo 'SmnR='.$minRed.'<br/>';
-          echo 'SmxR='.$maxRed.'<br/>';
-          echo 'SmnS='.$minStupac.'<br/>';
-          echo 'SmxS='.$maxStupac.'<br/>';
-          echo 'SBU='.$brojUpisuje.'<br/>';
-          echo'SZB='. $zadnjiBroj.'<br/>'; */
-
-
+       
         while ($brojUpisuje <= $zadnjiBroj) {
           //desno->lijevo
           for ($i = $maxStupac; $i >= $minStupac; $i--) {
@@ -123,15 +110,7 @@
           $minRed++;
           $maxRed--;
         }
-        /* echo 'EmnR='.$minRed.'<br/>';
-          echo 'EmxR='.$maxRed.'<br/>';
-          echo 'EmnS='.$minStupac.'<br/>';
-          echo 'EmxS='.$maxStupac.'<br/>';
-          echo 'EBU='.$brojUpisuje.'<br/>';
-          echo'EZB='. $zadnjiBroj.'<br/>'; */
-
-        //prikaži barem nešto JEBOTE!!!!
-        //print_r($matrica);
+        
 
         // matricaDruga
 
@@ -242,22 +221,23 @@
           $maxRed4--;
         }
 
-        
+
         //print_r($_REQUEST);
 
         echo '<hr>';
 
-        function phpAlert($msg) {
-            echo '<script type="text/javascript">alert("' . $msg . '")</script>';
-           }
-   
-        if($_REQUEST===[]){
+        function phpAlert($msg)
+        {
+          echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+        }
+
+        if ($_REQUEST === []) {
           phpAlert("Dobrodošli na Mirzusovo rješenje zadatka5.\\n\\Molim unesite vrijednosti");
-        }elseif($stupac === '' && $red===''){
+        } elseif ($stupac === '' && $red === '') {
           phpAlert("Unesite broj stupaca i redova");
-        }elseif($stupac===''){
+        } elseif ($stupac === '') {
           phpAlert("Unesite broj stupaca");
-        }elseif($red===''){
+        } elseif ($red === '') {
           phpAlert("Unesite broj redova");
         } else {
 
@@ -314,7 +294,6 @@
       </div>
     </div>
   </div>
-  <!-- Kraj tijela -->
   <?php require_once 'predlozak/podnozje.php' ?>
   </div>
   <?php require_once 'predlozak/skripte.php' ?>
