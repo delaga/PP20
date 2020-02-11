@@ -2,7 +2,7 @@
 
 return [
     'nazivAPP' => 'Edunova APP',
-    'url' => 'https://www.delaga.hr/',
+    'url' => 'http://pp20.delaga.hr/',
     'dev' => true,
     /*
     'db' =>[

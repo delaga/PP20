@@ -1,11 +1,5 @@
-# omogućiti URL rewrite
+Options +FollowSymLinks -MultiViews
 RewriteEngine On
-
-# preskoči ukoliko postoji datoteku
 RewriteCond %{REQUEST_FILENAME} !-f
-# preskoči ukoliko postoji direktorij
 RewriteCond %{REQUEST_FILENAME} !-d
-
-# sve zahtjeve prebaci na index.php
-
 RewriteRule (.*) index.php [L,E=PATH_INFO:/$1]

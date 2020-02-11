@@ -13,6 +13,6 @@ class Request
             $ruta='/';
         }
         return $ruta;
-        print_r
+        
     }
 }
