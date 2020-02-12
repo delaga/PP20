@@ -1,0 +1,8 @@
+<tr>
+        <td><?php echo $red->ime . ' ' . $red->prezime ?></td>
+        <td><?php echo $red->email ?></td>
+        <td>
+            <a href="/operater/promjena?sifra=<?php echo $red->sifra ?>"><i title="Uredi" class="fas fa-edit fa-2x"></i></a>
+            <a href="/operater/obrisi?sifra=<?php echo $red->sifra ?>"><i title="Know your place" class="fas fa-trash-alt fa-2x" style="color: red;"></i></a>
+        </td>
+        </tr>

@@ -30,17 +30,20 @@ class IndexController extends Controller
             ]);
             return;
         }
-        $veza=DB::getInstanca();
+
         //$veza = new PDO('mysql:host=localhost;dbname=edunovapp20;charset=utf8',
         //'edunova','edunova');
+
+        $veza = DB::getInstanca();
+
         	    //sql INJECTION PROBLEM
         //$veza->query('select lozinka from operater 
         //              where email=\'' . $_POST['email'] . '\';');
         $izraz = $veza->prepare('select * from operater 
-                     where email=:email;');
+                      where email=:email;');
         $izraz->execute(['email'=>$_POST['email']]);
+        //$rezultat=$izraz->fetch(PDO::FETCH_OBJ);
         $rezultat=$izraz->fetch();
-
         if($rezultat==null){
             $this->view->render('prijava',[
                 'poruka'=>'Ne postojeći korisnik',
@@ -59,8 +62,15 @@ class IndexController extends Controller
         unset($rezultat->lozinka);
         $_SESSION['operater']=$rezultat;
         //$this->view->render('privatno' . DIRECTORY_SEPARATOR . 'nadzornaPloca');
-        $npc= new NadzornaplocaController();
+        $npc = new NadzornaplocaController();
         $npc->index();
+    }
+
+    public function odjava()
+    {
+        unset($_SESSION['operater']);
+        session_destroy();
+        $this->index();
     }
 
     public function index()
@@ -79,13 +89,6 @@ class IndexController extends Controller
     public function onama()
     {
         $this->view->render('onama');
-    }
-
-    public function odjava()
-    {
-        unset($_SESSION['operater']);
-        session_destroy();
-        $this->index();
     }
 
     public function json()

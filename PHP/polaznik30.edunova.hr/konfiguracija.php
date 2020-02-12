@@ -2,12 +2,20 @@
 
 return [
     'nazivAPP' => 'Edunova APP',
-    'url' => 'http://polaznik30.edunova.hr/',
+    'url' => 'https://www.delaga.hr/',
     'dev' => true,
-     'db' =>[
-         'server' => 'localhost',
-         'baza' => 'edunovapp20',
-         'korisnik' => 'edunova',
-         'lozinka' => 'edunova'
-     ]
+    /*
+    'db' =>[
+        'server' => 'localhost',
+        'baza' => 'edunovapp20',
+        'korisnik' => 'edunova',
+        'lozinka' => 'edunova'
+    ]
+    */
+    'db' =>[
+        'server' => 'localhost',
+        'baza' => 'edunovapp20',
+        'korisnik' => 'edunova',
+        'lozinka' => 'edunova'
+    ]
 ];
